@@ -12,7 +12,7 @@ st.sidebar.title('Navigasi')
 
 page = st.sidebar.radio('Pages', list(Tabs.keys()))
 
-df, x, y = load_data
+df, x, y = load_data()
 
 if page in ['Prediction', 'Visualisation']:
     Tabs[page].app(df, x, y)
